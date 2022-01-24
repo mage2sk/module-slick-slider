@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Mage2SK Use Slick slider in Magento 2
+ * Mage2sk Use Slick slider in Magento 2
  *
- * @package      Mage2SK_SlickSlider
+ * @package      Mage2sk_SlickSlider
  * @author       Kishan Savaliya <kishansavaliyakb@gmail.com>
  */
 
-namespace Mage2SK\SlickSlider\Controller\Index;
+namespace Mage2sk\SlickSlider\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
@@ -24,7 +24,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->prepend(__('Mage2SK Slick slider demo'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Mage2sk Slick slider demo'));
 
         return $resultPage;
     }
