@@ -14,7 +14,10 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
-    "version": "2.1.0",
+    "require": {
+        "php": "~7.3.0||~7.4.0"
+    },
+    "version": "2.1.1",
     "authors": [{
         "name": "Kishan Savaliya",
         "email": "kishansavaliyakb@gmail.com"
