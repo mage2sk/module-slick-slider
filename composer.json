@@ -1,0 +1,37 @@
+{
+    "name": "mage2sk/module-slick-slider",
+    "description": "Magento 2 Slick Slider Sample Module",
+    "type": "magento2-module",
+    "keywords": [
+        "magento2",
+        "magento 2 extensions",
+        "magento2 slick slider",
+        "magento2 custom module",
+        "How to use slick slider with Magento 2",
+        "magento 2 free extensions"
+    ],
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "version": "2.1.0",
+    "authors": [{
+        "name": "Kishan Savaliya",
+        "email": "kishansavaliyakb@gmail.com"
+    }],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Mage2SK\\SlickSlider\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": {
+        "magento": {
+            "type": "composer",
+            "url": "https://repo.magento.com"
+        }
+    }
+}
