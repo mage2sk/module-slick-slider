@@ -1,6 +1,6 @@
 var config = {
     paths: {
-        slick: 'Mage2SK_SlickSlider/js/slick'
+        slick: 'Mage2sk_SlickSlider/js/slick'
     },
     shim: {
         slick: {
