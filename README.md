@@ -1,4 +1,4 @@
-# Mage2SK : How to use Slick Slider in Magento 2
+# Mage2sk : How to use Slick Slider in Magento 2
 
 We will learn here, how to use **Slick Slider** in Magento 2 step by step.
 
@@ -7,32 +7,32 @@ We can create new module in `app/code/` directory..
 ### Step - 1 - Create a directory for the module
 
 - In Magento 2, module name divided into two parts i.e Vendor_Module (for e.g Magento_Theme, Magento_Catalog)
-- We will create `Mage2SK_SlickSlider` here, So `Mage2SK` is vendor name and `SlickSlider` is name of this module.
-- So first create your namespace directory (`Mage2SK`) and move into that directory.
+- We will create `Mage2sk_SlickSlider` here, So `Mage2sk` is vendor name and `SlickSlider` is name of this module.
+- So first create your namespace directory (`Mage2sk`) and move into that directory.
 - Then create module name directory (`SlickSlider`)
 
-Now Go to : `app/code/Mage2SK/SlickSlider`
+Now Go to : `app/code/Mage2sk/SlickSlider`
 
 ### Step - 2 - Create module.xml file to declare new module.
 
-- Magento 2 looks for configuration information for each module in that module’s etc directory. so we need to add module.xml file here in our module `app/code/Mage2SK/SlickSlider/etc/module.xml` and it's content for our module is :
+- Magento 2 looks for configuration information for each module in that module’s etc directory. so we need to add module.xml file here in our module `app/code/Mage2sk/SlickSlider/etc/module.xml` and it's content for our module is :
 
 ~~~ xml
 <?xml version="1.0"?>
 <!--
 /**
- * Mage2SK Use Slick slider in Magento 2
+ * Mage2sk Use Slick slider in Magento 2
  *
- * @package      Mage2SK_SlickSlider
+ * @package      Mage2sk_SlickSlider
  * @author       Kishan Savaliya <kishansavaliyakb@gmail.com>
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-	<module name="Mage2SK_SlickSlider" setup_version="1.0.0" />
+	<module name="Mage2sk_SlickSlider" setup_version="1.0.0" />
 </config>
 ~~~
 
-In this file, we register a module with name `Mage2SK_SlickSlider` and the version is `1.0.0`.
+In this file, we register a module with name `Mage2sk_SlickSlider` and the version is `1.0.0`.
 
 ### Step - 3 - create registration.php
 
@@ -41,7 +41,7 @@ In this file, we register a module with name `Mage2SK_SlickSlider` and the versi
 In this step, we need to create this file:
 
 ~~~
-app/code/Mage2SK/SlickSlider/registration.php
+app/code/Mage2sk/SlickSlider/registration.php
 ~~~
 
 And it’s content for our module is:
@@ -49,19 +49,19 @@ And it’s content for our module is:
 ~~~ php
 <?php
 /**
- * Mage2SK Use Slick slider in Magento 2
+ * Mage2sk Use Slick slider in Magento 2
  *
- * @package      Mage2SK_SlickSlider
+ * @package      Mage2sk_SlickSlider
  * @author       Kishan Savaliya <kishansavaliyakb@gmail.com>
  */
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Mage2SK_SlickSlider',
+    'Mage2sk_SlickSlider',
     __DIR__
 );
 ~~~
 
-### Step - 4 - Enable `Mage2SK_SlickSlider` module.
+### Step - 4 - Enable `Mage2sk_SlickSlider` module.
 
 - By finish above step, you have created an empty module. Now we will enable it in Magento environment.
 - Before enable the module, we must check to make sure Magento has recognize our module or not by enter the following at the command line:
@@ -74,20 +74,20 @@ If you follow above step, you will see this in the result:
 
 ~~~
 List of disabled modules:
-Mage2SK_SlickSlider
+Mage2sk_SlickSlider
 ~~~
 
 This means the module has recognized by the system but it is still disabled. Run this command to enable it:
 
 ~~~
-php bin/magento module:enable Mage2SK_SlickSlider
+php bin/magento module:enable Mage2sk_SlickSlider
 ~~~
 
 The module has enabled successfully if you saw this result:
 
 ~~~
 The following modules has been enabled:
-- Mage2SK_SlickSlider
+- Mage2sk_SlickSlider
 ~~~
 
 This’s the first time you enable this module so Magento require to check and upgrade module database. We need to run this command:
@@ -100,14 +100,14 @@ php bin/magento setup:upgrade
 
 Create `requirejs-config.js` this file here in module..
 
-> app/code/Mage2SK/SlickSlider/view/frontend/requirejs-config.js
+> app/code/Mage2sk/SlickSlider/view/frontend/requirejs-config.js
 
 Content for this file is ..
 
 ~~~
 var config = {
     paths: {
-        slick: 'Mage2SK_SlickSlider/js/slick'
+        slick: 'Mage2sk_SlickSlider/js/slick'
     },
     shim: {
         slick: {
@@ -123,27 +123,27 @@ You can download latest version of [slick here](http://kenwheeler.github.io/slic
 
 Download that and extract .zip file and copy `slick.js` and `slick.min.js` files from there and paste that here..
 
-> app/code/Mage2SK/SlickSlider/view/frontend/web/js/slick.js
+> app/code/Mage2sk/SlickSlider/view/frontend/web/js/slick.js
 
 and
 
-> app/code/Mage2SK/SlickSlider/view/frontend/web/js/slick.min.js
+> app/code/Mage2sk/SlickSlider/view/frontend/web/js/slick.min.js
 
 ### Step - 7 - Now add `slick.less` and `slick-theme.less` files
 
 Copy `.less` files from downloaded directory to below mentioned path..
 
-> app/code/Mage2SK/SlickSlider/view/frontend/web/css/source/slick.less
+> app/code/Mage2sk/SlickSlider/view/frontend/web/css/source/slick.less
 
 and 
 
-> app/code/Mage2SK/SlickSlider/view/frontend/web/css/source/slick-theme.less
+> app/code/Mage2sk/SlickSlider/view/frontend/web/css/source/slick-theme.less
 
 ### Step - 8 - create `_module.less` file
 
 Now create `_module.less` file here..
 
-> `app/code/Mage2SK/SlickSlider/view/frontend/web/css/source/_module.less`
+> `app/code/Mage2sk/SlickSlider/view/frontend/web/css/source/_module.less`
 
 This is important file to run slick slider properly in Magento 2 without any issues.
 
@@ -160,7 +160,7 @@ Content for this file is..
 
 - Create `routes.xml` file here..
 
-> app/code/Mage2SK/SlickSlider/etc/frontend/routes.xml
+> app/code/Mage2sk/SlickSlider/etc/frontend/routes.xml
 
 Content for this file is ..
 
@@ -168,16 +168,16 @@ Content for this file is ..
 <?xml version="1.0"?>
 <!--
 /**
- * Mage2SK Use Slick slider in Magento 2
+ * Mage2sk Use Slick slider in Magento 2
  *
- * @package      Mage2SK_SlickSlider
+ * @package      Mage2sk_SlickSlider
  * @author       Kishan Savaliya <kishansavaliyakb@gmail.com>
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
         <route id="magehelper_slickslider" frontName="magehelper_slickslider">
-            <module name="Mage2SK_SlickSlider" />
+            <module name="Mage2sk_SlickSlider" />
         </route>
     </router>
 </config>
@@ -190,7 +190,7 @@ Content for this file is ..
 - Now we will create our controller and action to show all slick slider demo. We will create controller and action here
 
 ~~~
-app/code/Mage2SK/SlickSlider/Controller/Index/Index.php 
+app/code/Mage2sk/SlickSlider/Controller/Index/Index.php 
 ~~~
 
 And content for this file is :
@@ -198,13 +198,13 @@ And content for this file is :
 ~~~
 <?php
 /**
- * Mage2SK Use Slick slider in Magento 2
+ * Mage2sk Use Slick slider in Magento 2
  *
- * @package      Mage2SK_SlickSlider
+ * @package      Mage2sk_SlickSlider
  * @author       Kishan Savaliya <kishansavaliyakb@gmail.com>
  */
 
-namespace Mage2SK\SlickSlider\Controller\Index;
+namespace Mage2sk\SlickSlider\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
@@ -221,7 +221,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->getConfig()->getTitle()->prepend(__('Mage2SK Slick slider demo'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Mage2sk Slick slider demo'));
  
         return $resultPage;
     }
@@ -232,7 +232,7 @@ class Index extends \Magento\Framework\App\Action\Action
 
 - Create layout file here..
 
-> app/code/Mage2SK/SlickSlider/view/frontend/layout/magehelper_slickslider_index_index.xml
+> app/code/Mage2sk/SlickSlider/view/frontend/layout/magehelper_slickslider_index_index.xml
 
 Content for this file is ...
 
@@ -240,16 +240,16 @@ Content for this file is ...
 <?xml version="1.0"?>
 <!--
 /**
- * Mage2SK Use Slick slider in Magento 2
+ * Mage2sk Use Slick slider in Magento 2
  *
- * @package      Mage2SK_SlickSlider
+ * @package      Mage2sk_SlickSlider
  * @author       Kishan Savaliya <kishansavaliyakb@gmail.com>
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">       
     <referenceContainer name="content">
         <block
-            template="Mage2SK_SlickSlider::slick-slider.phtml"
+            template="Mage2sk_SlickSlider::slick-slider.phtml"
             class="Magento\Framework\View\Element\Template"
             name="magento-2-slick-slider-demo"/>
     </referenceContainer>
@@ -258,7 +258,7 @@ Content for this file is ...
 
 - Create template file here ...
 
-> app/code/Mage2SK/SlickSlider/view/frontend/templates/slick-slider.phtml
+> app/code/Mage2sk/SlickSlider/view/frontend/templates/slick-slider.phtml
 
 Add Content in phtml file..
 
