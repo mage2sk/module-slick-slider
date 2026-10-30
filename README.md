@@ -274,3 +274,7 @@ php bin/magento setup:static-content:deploy -f
 ~~~
 
 Hope this article will helpful to you!!
+
+## License
+
+Free and open source under the MIT License. See [LICENSE.txt](LICENSE.txt). Files that carry their own copyright header (bundled third-party libraries, Magento or Hyvä templates) remain under their original licenses.

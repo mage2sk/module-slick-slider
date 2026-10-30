@@ -10,14 +10,11 @@
         "How to use slick slider with Magento 2",
         "magento 2 free extensions"
     ],
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
-    ],
+    "license": "MIT",
     "require": {
         "php": "~7.3.0||~7.4.0"
     },
-    "version": "2.1.4",
+    "version": "2.1.5",
     "authors": [{
         "name": "Kishan Savaliya",
         "email": "kishansavaliyakb@gmail.com"
